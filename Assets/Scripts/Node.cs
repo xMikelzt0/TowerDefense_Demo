@@ -37,14 +37,15 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (!buildManager.CanBuild)
-        {           
+        if (turret != null)
+        {
+            //Debug.Log("Can't build there! - Turret or building exists.");
+            buildManager.SelectNode(this);
             return;
         }
 
-        if (turret != null)
-        {
-            Debug.Log("Can't build there! - Turret or building exists.");
+        if (!buildManager.CanBuild)
+        {           
             return;
         }
 
