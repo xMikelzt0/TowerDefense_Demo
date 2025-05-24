@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3985516053948543496}
   - component: {fileID: 3528623077266076929}
   m_Layer: 0
-  m_Name: LaserBeamer
+  m_Name: LaserBeamer_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2691517321830381547}
@@ -48,12 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f177c3f66cdde242982f326deddd6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 30
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  damageOverTime: 30
-  slowAmount: 0.5
+  damageOverTime: 40
+  slowAmount: 0.8
   lineRenderer: {fileID: 3528623077266076929}
   impactEffect: {fileID: 4559858154250608467}
   impactLight: {fileID: 437648718336024045}
@@ -113,8 +113,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.28481102
+        time: 0.0056037903
+        value: 0.5000057
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -452,8 +452,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 2
+      scalar: 4
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9903,7 +9903,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0, g: 1, b: 0.06282711, a: 1}
   m_Intensity: 3
-  m_Range: 10
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9977,7 +9977,7 @@ Transform:
   m_GameObject: {fileID: 6528138616374104334}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.3491997, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2711996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10012,7 +10012,7 @@ Transform:
   m_GameObject: {fileID: 7764409036298453973}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0.447, z: 0}
+  m_LocalPosition: {x: -0, y: 0.369, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 63.703358}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10046,7 +10046,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -454857502957749149, guid: 3b9f88d9eaeade3408442ee3573c9e4e, type: 3}
+  - {fileID: 2100000, guid: 2a37ebe378f790241aa714d03be83b3b, type: 2}
   - {fileID: 772359722248288438, guid: 3b9f88d9eaeade3408442ee3573c9e4e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -10130,9 +10130,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8418019662413110148, guid: 3b9f88d9eaeade3408442ee3573c9e4e, type: 3}
+  - {fileID: 2100000, guid: 2a37ebe378f790241aa714d03be83b3b, type: 2}
   - {fileID: 7347949212528627919, guid: 3b9f88d9eaeade3408442ee3573c9e4e, type: 3}
-  - {fileID: 4387638107276554849, guid: 3b9f88d9eaeade3408442ee3573c9e4e, type: 3}
+  - {fileID: 2100000, guid: 2a37ebe378f790241aa714d03be83b3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
