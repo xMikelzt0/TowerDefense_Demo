@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     public static bool gameOver;
 
     public GameObject gameOverUI;
+    public GameObject completeLevelUI;
+
+
     void Start()
     {
         gameOver = false;
@@ -17,11 +20,11 @@ public class GameManager : MonoBehaviour
         if (gameOver)
             return;
 
-        if(Input.GetKeyDown("e"))
-        {
-            gameOver = true;
-            gameOverUI.SetActive(true);
-        }
+        //if(Input.GetKeyDown("e"))
+        //{
+        //    gameOver = true;
+        //    gameOverUI.SetActive(true);
+        //}
 
         if (PlayerStats.Lives <= 0)
         {
@@ -34,5 +37,10 @@ public class GameManager : MonoBehaviour
         gameOverUI.SetActive(true);
         //Debug.Log("Game Over");
         
+    }
+    public void WinLevel()
+    {
+        gameOver = true;
+        completeLevelUI.SetActive(true);
     }
 }

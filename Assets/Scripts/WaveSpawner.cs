@@ -11,6 +11,7 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
     public float countdown = 2f;
     public TextMeshProUGUI waveCountdownText;
+    public GameManager gameManager;
     private int waveIndex = 0;
     void Update()
     {
@@ -18,6 +19,13 @@ public class WaveSpawner : MonoBehaviour
         {
             return; // Don't spawn new enemies if there are still alive enemies
         }
+
+        if (waveIndex == waves.Length)
+        {
+            gameManager.WinLevel(); // Call the WinLevel method from GameManager when all waves are completed
+            this.enabled = false; // Disable the spawner if all waves are completed
+        }
+
         if (countdown <= 0f)
         {
             //SpawnWave();
@@ -31,6 +39,8 @@ public class WaveSpawner : MonoBehaviour
 
         waveCountdownText.text = string.Format("{0:00.00}", countdown);
     }
+
+
     IEnumerator SpawnWave()
     {
         PlayerStats.Rounds++;
@@ -45,11 +55,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1f / wave.rate);
         }
         waveIndex++;
-
-        if (waveIndex == waves.Length)
-        {
-            this.enabled = false; // Disable the spawner if all waves are completed
-        }
+        
     }
     void SpawnEnemy(GameObject enemy)
     {
