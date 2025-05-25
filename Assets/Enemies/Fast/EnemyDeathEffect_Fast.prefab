@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4421494475698080558}
   - component: {fileID: 1585062714542238538}
   m_Layer: 0
-  m_Name: EnemyDeathEffect
+  m_Name: EnemyDeathEffect_Fast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4835,7 +4835,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 39c986e4c6d386c458ad0dcf6ee651ea, type: 2}
+  - {fileID: 2100000, guid: 40bbc18265e95884d8693c60ac0c2dd4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
